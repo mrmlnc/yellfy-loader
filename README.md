@@ -35,7 +35,7 @@ function task(done) {
 
 module.exports = {
   task,
-  description: 'test
+  description: 'test'
 }
 ```
 
