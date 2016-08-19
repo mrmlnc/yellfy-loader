@@ -12,6 +12,8 @@ $ npm i -D yellfy-loader
 
 ## Usage
 
+**gulpfile.js**
+
 ```js
 const { Loader } = require('yellfy-loader');
 
@@ -20,6 +22,21 @@ const loader = new Loader('./gulp/tasks', {
 });
 
 loader.load();
+```
+
+**gulp/tasks/task.js**
+
+```js
+'use strict';
+
+function task(done) {
+  done();
+}
+
+module.exports = {
+  task,
+  description: 'test
+}
 ```
 
 ## Supported options
