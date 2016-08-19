@@ -6,6 +6,7 @@ import * as fs from 'fs';
 export interface ITask {
   name: string;
   task: any;
+  description: string;
 }
 
 export interface ILoaderOptions {
@@ -62,7 +63,8 @@ export class Loader implements ILoader {
         if (this.validate(task)) {
           this.valid.push({
             name,
-            task: task.task
+            task: task.task,
+            description: task.description
           });
         } else {
           this.invalid.push(name);
@@ -92,7 +94,12 @@ export class Loader implements ILoader {
   }
 
   private validate(task: ITask) {
-    return typeof task.task === 'function';
+    let status = typeof task.task === 'function';
+    if (status && task.description) {
+      status = typeof task.description === 'string';
+    }
+
+    return status;
   }
 
   private register(task: ITask) {
@@ -100,6 +107,8 @@ export class Loader implements ILoader {
     if (this.options.rename && this.options.rename[task.name]) {
       name = this.options.rename[task.name];
     }
+
+    task.task.description = task.description;
 
     this.gulp.task(name, task.task);
   }
