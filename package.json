@@ -1,6 +1,6 @@
 {
   "name": "yellfy-loader",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "User-friendly Gulp task manager for Yellfy project.",
   "license": "MIT",
   "repository": "mrmlnc/yellfy-loader",
