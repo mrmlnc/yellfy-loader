@@ -1,9 +1,9 @@
 'use strict';
 
 function task(done) {
-  done();
+	done();
 }
 
 module.exports = {
-  task
+	task
 }
