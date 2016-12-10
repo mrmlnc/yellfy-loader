@@ -25,11 +25,13 @@
     "manager"
   ],
   "devDependencies": {
-    "rimraf": "^2.5.0",
-    "typescript": "^2.0.3",
-    "tslint": "^3.13.0",
+    "@types/mocha": "^2.2.33",
+    "@types/node": "0.0.2",
+    "gulp": "gulpjs/gulp#4.0",
     "mocha": "^3.0.1",
-    "gulp": "gulpjs/gulp#4.0"
+    "rimraf": "^2.5.0",
+    "tslint": "^3.13.0",
+    "typescript": "^2.0.3"
   },
   "scripts": {
     "clean": "rimraf out",
