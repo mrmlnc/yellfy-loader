@@ -15,19 +15,14 @@ export interface ILoaderOptions {
 	rename?: any;
 }
 
-export interface ILoader {
-	taskDir: string;
-	options?: ILoaderOptions;
-}
-
-export class Loader implements ILoader {
+export class Loader {
 
 	protected valid: ITask[] = [];
 	protected invalid: string[] = [];
 
 	private gulp: any;
 
-	constructor(public taskDir: string, public options?: ILoaderOptions) {
+	constructor(private taskDir: string, private options?: ILoaderOptions) {
 		if (!this.options) {
 			this.options = {};
 		}
