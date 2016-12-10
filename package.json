@@ -11,9 +11,9 @@
   "engines": {
     "node": ">=4.0.0"
   },
-  "main": "out/loader.js",
   "typings": "out/loader.d.ts",
   "files": [
+    "index.js",
     "out/loader.js",
     "out/loader.d.ts"
   ],
