@@ -15,13 +15,11 @@ $ npm i -D yellfy-loader
 **gulpfile.js**
 
 ```js
-const { Loader } = require('yellfy-loader');
+const loader = require('yellfy-loader');
 
-const loader = new Loader('./gulp/tasks', {
-  // options
+loader.setup('./gulp/tasks', {
+	// options
 });
-
-loader.load();
 ```
 
 **gulp/tasks/task.js**

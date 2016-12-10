@@ -9,7 +9,7 @@ export interface ITask {
 	description: string;
 }
 
-export interface ILoaderOptions {
+export interface IOptions {
 	gulp?: any;
 	reporter?: (valid: ITask[], invalid: string[]) => void;
 	rename?: any;
@@ -22,7 +22,7 @@ export class Loader {
 
 	private gulp: any;
 
-	constructor(private taskDir: string, private options?: ILoaderOptions) {
+	constructor(private taskDir: string, private options?: IOptions) {
 		if (!this.options) {
 			this.options = {};
 		}
@@ -108,4 +108,8 @@ export class Loader {
 		this.gulp.task(name, task.task);
 	}
 
+}
+
+export default function setup(taskDir: string, options?: IOptions) {
+	new Loader(taskDir, options).load();
 }
