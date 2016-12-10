@@ -110,6 +110,6 @@ export class Loader {
 
 }
 
-export default function setup(taskDir: string, options?: IOptions) {
+export function setup(taskDir: string, options?: IOptions) {
 	new Loader(taskDir, options).load();
 }
