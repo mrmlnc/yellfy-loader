@@ -1,5 +1,7 @@
 # yellfy-loader
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/mrmlnc/yellfy-loader.svg)](https://greenkeeper.io/)
+
 > User-friendly Gulp task manager for Yellfy project.
 
 [![Travis Status](https://travis-ci.org/mrmlnc/yellfy-loader.svg?branch=master)](https://travis-ci.org/mrmlnc/yellfy-loader)
